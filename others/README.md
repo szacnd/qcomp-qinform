@@ -1,0 +1,2 @@
+## Others
+Here, you’ll find exploratory code primarily inspired by research papers I’ve read, along with some code developed for various competitions. The main folder is dedicated to material related to the textbook.
