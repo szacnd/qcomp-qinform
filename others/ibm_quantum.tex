@@ -101,5 +101,33 @@ $$
 M\ket{b} = (\sum_{a\in\Omega}\ket{f(a)}\bra{a})\ket{b} = \sum_{a\in\Omega}\ket{f(a)}\braket{a}{b} = \ket{f(b)}
 $$
 for each $b \in \Omega$.
+\subsection{Probabilistic operations and stochastic matrices}
+Probabilistic operations can be represented by stochastic matrices, with stochastic matrices we can represent the set of all probabilistic operations. These matrices satisfies these two properties:
+\begin{enumerate}
+  \item All entries are nonnegative real numbers.
+  \item The entries in every column sum to 1. 
+\end{enumerate}
+Equivalently, stochastic matrices are matrices whose columns all form probability vectors.
+
+\textbf{Example:} Consider the following stochastic matrix:
+$$
+M = \begin{pmatrix} 1 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{pmatrix}
+$$
+Then for a bit, we have for $\ket{0}$:
+$$
+M\ket{0} = \begin{pmatrix} 1 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 1\cdot0 + \frac{1}{2}\cdot0 \\ 0\cdot1 + \frac{1}{2}\cdot0 \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+$$
+and for $\ket{1}$:
+$$
+M\ket{1} = \begin{pmatrix} 1 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 1\cdot0 + \frac{1}{2}\cdot1 \\ 0\cdot0 + \frac{1}{2}\cdot1 \end{pmatrix} = \begin{pmatrix} \frac{1}{2} \\ \frac{1}{2} \end{pmatrix}
+$$
+A different way to think about probabilistic operators is that they are random choice on of deterministic operators.
+\subsection{Composition of probabilistic operations}
+Suppose that $X$ is a system having classical state set $\Omega$, and $M_1, \dots, M_n $ are stochastic matrices representing probabilistic operations on the system $X$.
+
+If we apply the $M_1$ on the probabilistic state represented by the probabilistic vector $u$ and then apply $M_2$, due to the associativity of matrices multiplication, we can:
+$$
+M_2(M_1u) = (M_2M_1u)
+$$
 
 \end{document}
